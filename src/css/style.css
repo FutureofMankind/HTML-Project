@@ -1,66 +1,65 @@
-.conteiner {
-    margin-top: 200px;
-    margin-left: 100px;
-  }
-  
-  .btn {
-    padding: 0.5rem 1rem;
-    font-size: 1.25rem;
-    line-height: 1.5;
-    border-radius: 0.3rem;
-    color: #fff;
-    background-color: #355fdc;
-    border-color: #355fdc;
-    cursor: pointer;
-  }
-  
-  .btn:hover {
-    color: #fff;
-    background-color: #2c499d;
-    border-color: #2c499d;
-  }
-  
-  .btn:focus {
-    box-shadow: 0 0 0 0.2rem rgb(44 73 157 / 50%);
-  }
-  
-  .tooltip-wrapper {
-    position: relative;
-    z-index: 1060;
-    display: block;
-    max-width: 276px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: start;
-    text-decoration: none;
-    text-shadow: none;
-    text-transform: none;
-    letter-spacing: normal;
-    word-break: normal;
-    word-spacing: normal;
-    white-space: normal;
-    line-break: auto;
-    font-size: .875rem;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid rgba(0,0,0,.2);
-    border-radius: 0.3rem;
-  }
-  
-  .tooltip-title {
-    padding: 0.5rem 0.75rem;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 1rem;
-    background-color: #f7f7f7;
-    border-bottom: 1px solid #ebebeb;
-    border-top-left-radius: calc(0.3rem - 1px);
-    border-top-right-radius: calc(0.3rem - 1px);
-  }
-  
-  .tooltip-text {
-    padding: 0.5rem 0.75rem;
-    color: #212529;
-  }
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 80vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  padding: 15px;
+  width: 300px;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: red;
+  font-size: 25px;
+  color: #fff;
+}
+
+.tooltip {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  width: 400px;
+  transform: translate(-50%, -110%);
+  display: none;
+  background-color: #fff;
+  border: 1px solid grey;
+  border-radius: 15px;
+}
+
+.tooltip-title {
+  background-color: rgb(218, 214, 214);
+  padding: 10px;
+  font-weight: bold;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.tooltip-text {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.tooltip::after {
+  content: "";
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  background-color: white;
+  border: 1px solid grey;
+  border-left-style: none;
+  border-top-style: none;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.active {
+  display: block;
+}
